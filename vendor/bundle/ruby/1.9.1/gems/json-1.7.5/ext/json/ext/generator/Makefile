@@ -59,7 +59,7 @@ debugflags = -ggdb
 warnflags = -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long
 CFLAGS   = -fPIC $(cflags) -O3 -Wall -O0 -ggdb 
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
-DEFS     = 
+DEFS     = -D_FILE_OFFSET_BITS=64
 CPPFLAGS = -DJSON_GENERATOR  $(DEFS) $(cppflags)
 CXXFLAGS = $(CFLAGS) $(cxxflags)
 ldflags  = -L.  -rdynamic -Wl,-export-dynamic
@@ -74,7 +74,7 @@ EXEEXT =
 RUBY_BASE_NAME = ruby
 RUBY_INSTALL_NAME = ruby
 RUBY_SO_NAME = ruby
-arch = x86_64-linux
+arch = i686-linux
 sitearch = $(arch)
 ruby_version = 1.9.1
 ruby = /usr/local/bin/ruby
@@ -114,8 +114,8 @@ STATIC_LIB =
 
 BINDIR        = $(bindir)
 RUBYCOMMONDIR = $(sitedir)$(target_prefix)
-RUBYLIBDIR = /home/juanma/Escritorio/myrottenpotatoes/vendor/bundle/ruby/1.9.1/gems/json-1.7.5/lib$(target_prefix)
-RUBYARCHDIR = /home/juanma/Escritorio/myrottenpotatoes/vendor/bundle/ruby/1.9.1/gems/json-1.7.5/lib$(target_prefix)
+RUBYLIBDIR = /home/al-09-10/jmaviles/Escritorio/myrottenpotatoes/vendor/bundle/ruby/1.9.1/gems/json-1.7.5/lib$(target_prefix)
+RUBYARCHDIR = /home/al-09-10/jmaviles/Escritorio/myrottenpotatoes/vendor/bundle/ruby/1.9.1/gems/json-1.7.5/lib$(target_prefix)
 HDRDIR        = $(rubyhdrdir)/ruby$(target_prefix)
 ARCHHDRDIR    = $(rubyhdrdir)/$(arch)/ruby$(target_prefix)
 

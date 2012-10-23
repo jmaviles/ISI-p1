@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.files = ["bin/rdebug", "README.md", "ext/ruby_debug/extconf.rb"]
   s.homepage = "http://github.com/cldwalker/debugger"
   s.require_paths = ["lib"]
-  s.rubygems_version = "1.8.10"
+  s.rubygems_version = "1.8.24"
   s.summary = "Fast Ruby debugger - base + cli"
 
   if s.respond_to? :specification_version then

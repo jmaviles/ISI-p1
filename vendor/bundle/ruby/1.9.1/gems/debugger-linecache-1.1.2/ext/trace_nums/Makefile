@@ -59,8 +59,8 @@ debugflags = -ggdb
 warnflags = -Wextra -Wno-unused-parameter -Wno-parentheses -Wpointer-arith -Wwrite-strings -Wno-missing-field-initializers -Wno-long-long
 CFLAGS   = -fPIC $(cflags) 
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
-DEFS     = 
-CPPFLAGS = -DHAVE_VM_CORE_H -DHAVE_VERSION_H -I/usr/local/include/ruby-1.9.1/ruby-1.9.2-p290
+DEFS     = -D_FILE_OFFSET_BITS=64
+CPPFLAGS = -DHAVE_VM_CORE_H -DHAVE_VERSION_H -I/home/al-09-10/jmaviles/Escritorio/myrottenpotatoes/vendor/bundle/ruby/1.9.1/gems/debugger-ruby_core_source-1.1.4/lib/debugger/ruby_core_source/ruby-1.9.2-p290
 CXXFLAGS = $(CFLAGS) $(cxxflags)
 ldflags  = -L.  -rdynamic -Wl,-export-dynamic
 dldflags = 
@@ -74,7 +74,7 @@ EXEEXT =
 RUBY_BASE_NAME = ruby
 RUBY_INSTALL_NAME = ruby
 RUBY_SO_NAME = ruby
-arch = x86_64-linux
+arch = i686-linux
 sitearch = $(arch)
 ruby_version = 1.9.1
 ruby = /usr/local/bin/ruby
@@ -114,8 +114,8 @@ STATIC_LIB =
 
 BINDIR        = $(bindir)
 RUBYCOMMONDIR = $(sitedir)$(target_prefix)
-RUBYLIBDIR = /home/juanma/Escritorio/myrottenpotatoes/vendor/bundle/ruby/1.9.1/gems/debugger-linecache-1.1.2/lib$(target_prefix)
-RUBYARCHDIR = /home/juanma/Escritorio/myrottenpotatoes/vendor/bundle/ruby/1.9.1/gems/debugger-linecache-1.1.2/lib$(target_prefix)
+RUBYLIBDIR = /home/al-09-10/jmaviles/Escritorio/myrottenpotatoes/vendor/bundle/ruby/1.9.1/gems/debugger-linecache-1.1.2/lib$(target_prefix)
+RUBYARCHDIR = /home/al-09-10/jmaviles/Escritorio/myrottenpotatoes/vendor/bundle/ruby/1.9.1/gems/debugger-linecache-1.1.2/lib$(target_prefix)
 HDRDIR        = $(rubyhdrdir)/ruby$(target_prefix)
 ARCHHDRDIR    = $(rubyhdrdir)/$(arch)/ruby$(target_prefix)
 
